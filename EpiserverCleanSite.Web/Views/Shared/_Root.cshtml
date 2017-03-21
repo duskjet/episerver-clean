@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+@model EpiserverCleanSite.Web.Models.Pages.PageData
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @{Html.RenderPartial("_Metadata", Model);}
+    <title>@Model.Title</title>
+</head>
+<body>
+    <div> 
+        @RenderBody()
+    </div>
+</body>
+</html>

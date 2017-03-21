@@ -7,8 +7,8 @@ using EPiServer.SpecializedProperties;
 
 namespace EpiserverCleanSite.Web.Models.Pages
 {
-    [ContentType(DisplayName = "StartPage", GUID = "85a2ec16-d4e9-46d5-8c0b-f3ca28d32ee7", Description = "")]
-    public class StartPage : PageData
+    [ContentType(DisplayName = "StandartPage", GUID = "de0cff87-589b-4dfd-999a-80aa33599e13", Description = "")]
+    public class StandartPage : PageData
     {
         [CultureSpecific]
         [Display(
@@ -18,7 +18,9 @@ namespace EpiserverCleanSite.Web.Models.Pages
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
 
-        [Display(Name = "Govno kakoeto", GroupName = SystemTabNames.Content, Order = 1)]
-        public virtual string VazhnoeGovno { get; set; }
+        [Display(
+            GroupName = SystemTabNames.Content,
+            Order = 2)]
+        public virtual ContentArea MainContentArea { get; set; }
     }
 }
